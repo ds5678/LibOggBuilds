@@ -14,26 +14,14 @@ jobs:
 
     - name: Configure Ogg
       run: ./configure
-      shell: bash
-      with:
-        password: ${{ secrets.ACCESS_TOKEN }}
       working-directory: ./libogg/
     - name: Build Ogg
       run: make
-      shell: bash
-      with:
-        password: ${{ secrets.ACCESS_TOKEN }}
       working-directory: ./libogg/
 
     - name: Configure Vorbis
       run: ./configure
-      shell: bash
-      with:
-        password: ${{ secrets.ACCESS_TOKEN }}
       working-directory: ./libvorbis/
     - name: Build Vorbis
       run: make
-      shell: bash
-      with:
-        password: ${{ secrets.ACCESS_TOKEN }}
       working-directory: ./libvorbis/
