@@ -25,7 +25,7 @@ jobs:
       working-directory: ./libogg/
       
     - name: Configure Vorbis
-      run: sudo ./configure
+      run: ./configure
       working-directory: ./libvorbis/
     - name: Build Vorbis
       run: make
