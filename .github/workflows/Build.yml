@@ -23,7 +23,7 @@ jobs:
       run: ./configure
       working-directory: ./libogg/
     - name: Build Ogg
-      run: sudo make
+      run: sudo make install
       working-directory: ./libogg/
 
     - name: List files1
