@@ -13,14 +13,14 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Configure Ogg
-      run: ./configure
+      run: sudo ./configure
       working-directory: ./libogg/
     - name: Build Ogg
       run: make
       working-directory: ./libogg/
 
     - name: Configure Vorbis
-      run: ./configure
+      run: sudo ./configure
       working-directory: ./libvorbis/
     - name: Build Vorbis
       run: make
