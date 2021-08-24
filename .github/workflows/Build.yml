@@ -1,0 +1,31 @@
+name: Build
+
+on:
+   push:
+    branches: [ master ]
+   pull_request:
+    branches: [ master ]
+
+jobs:
+  BuildLinux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure Ogg
+      run: ./configure
+      shell: bash
+      working-directory: ./libogg/
+    - name: Build Ogg
+      run: make
+      shell: bash
+      working-directory: ./libogg/
+
+    - name: Configure Vorbis
+      run: ./configure
+      shell: bash
+      working-directory: ./libvorbis/
+    - name: Build Vorbis
+      run: make
+      shell: bash
+      working-directory: ./libvorbis/
