@@ -36,6 +36,13 @@ jobs:
       run: ls -R
       shell: bash
 
+    - name: Upload Ogg
+      uses: actions/upload-artifact@v2
+      with:
+        name: LibOgg
+        path: /home/runner/work/OggVorbisBuilds/OggVorbisBuilds/libogg/libogg-1.3.5.zip
+        if-no-files-found: error
+
 #    - name: Install
 #      run: ./install-sh
 #      working-directory: ./libogg/
