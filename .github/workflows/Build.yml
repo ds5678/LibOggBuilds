@@ -23,7 +23,14 @@ jobs:
     - name: Build Ogg
       run: make
       working-directory: ./libogg/
-      
+
+    - name: List files1
+      run: ls -R
+      shell: bash
+
+    - name: Autogen
+      run: ./autogen.sh
+      working-directory: ./libvorbis/
     - name: Configure Vorbis
       run: ./configure
       working-directory: ./libvorbis/
@@ -31,6 +38,6 @@ jobs:
       run: make
       working-directory: ./libvorbis/
 
-    - name: List files
+    - name: List files 2
       run: ls -R
       shell: bash
