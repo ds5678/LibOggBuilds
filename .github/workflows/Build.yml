@@ -15,6 +15,7 @@ jobs:
     - name: Make executable
       run: |
         chmod +x ./libogg/configure
+        chmod +x ./libogg/install-sh
         chmod +x ./libvorbis/autogen.sh
         chmod +x ./libvorbis/configure
 
@@ -28,6 +29,10 @@ jobs:
     - name: List files1
       run: ls -R
       shell: bash
+
+    - name: Install
+      run: ./install-sh
+      working-directory: ./libogg/
 
     - name: Autogen
       run: ./autogen.sh
