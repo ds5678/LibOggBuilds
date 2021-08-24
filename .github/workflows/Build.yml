@@ -15,6 +15,7 @@ jobs:
     - name: Make executable
       run: |
         chmod +x ./libogg/configure
+        chmod +x ./libvorbis/autogen.sh
         chmod +x ./libvorbis/configure
 
     - name: Configure Ogg
