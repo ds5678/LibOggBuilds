@@ -27,8 +27,10 @@ jobs:
       working-directory: ./libogg/
     - name: make check
       run: sudo make check
+      working-directory: ./libogg/
     - name: make distcheck
       run: sudo make distcheck
+      working-directory: ./libogg/
 
     - name: List files1
       run: ls -R
