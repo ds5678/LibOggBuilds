@@ -12,8 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Make executable
+      run: chmod +x ./libogg/configure
     - name: Configure Ogg
-      run: sudo /home/runner/OggVorbisBuilds/OggVorbisBuilds/libogg/configure
+      run: ./configure
+      working-directory: ./libogg/
     - name: Build Ogg
       run: make
       working-directory: ./libogg/
